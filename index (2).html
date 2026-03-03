@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laporan OOP Dart - Rifqi Prayoga
+</title>
+
+<style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 40px;
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #facc15;
+}
+
+h2 {
+    color: #38bdf8;
+    border-left: 4px solid #facc15;
+    padding-left: 10px;
+}
+
+.header-box {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    transition: 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-4px);
+}
+
+pre {
+    background-color: #020617;
+    color: #22d3ee;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+iframe {
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    width: 100%;
+    height: 500px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 14px;
+    color: #94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header-box">
+<h1>Rifqi Prayoga</h1>
+<h3>NIM : 251410005</h3>
+<h3>KLS : SI2A</h3>
+<h2>LAPORAN OBJECT ORIENTED PROGRAMMING (OOP) - DART</h2>
+</div>
+
+<div class="section">
+<h2>1. Pengertian OOP</h2>
+<p>
+Object Oriented Programming (OOP) adalah paradigma pemrograman yang berorientasi pada objek.
+Objek dibuat dari class yang memiliki atribut dan method.
+</p>
+</div>
+
+<div class="section">
+<h2>2. Class dan Object</h2>
+<pre><code>
+class Car {
+  String? model;
+  String? color;
+
+  void start() {
+    print('Car started!');
+  }
+
+  void stop() {
+    print('Car stopped!');
+  }
+}
+</code></pre>
+
+<iframe src="https://dartpad.dev/8f3627510d64b42cab35e6cd91949b40?run=true"></iframe>
+</div>
+
+<div class="section">
+<h2>3. Constructor</h2>
+<pre><code>
+class Car {
+  String? model;
+  String? color;
+
+  Car(this.model, this.color);
+
+  void start() {
+    print('Car started!');
+  }
+}
+</code></pre>
+
+<iframe src="https://dartpad.dev/ab55d3390bcc10e7da6e19bb7dd6b37c?run=true"></iframe>
+</div>
+
+<div class="section">
+<h2>4. Validasi Data</h2>
+<pre><code>
+class Mahasiswa {
+  String nama;
+  String nim;
+  double ipk;
+
+  Mahasiswa(this.nama, this.nim, this.ipk) {
+    if (ipk < 0.0 || ipk > 4.0) {
+      throw ArgumentError('IPK harus 0.0 - 4.0');
+    }
+  }
+}
+</code></pre>
+
+<iframe src="https://dartpad.dev/3947e3d1fdf39788ba11363312a67a93?run=true"></iframe>
+</div>
+
+<div class="section">
+<h2>5. Encapsulation</h2>
+<pre><code>
+class Person {
+  String _name;
+  int age;
+
+  Person(this._name, this.age);
+
+  void setName(String name) {
+    _name = name;
+  }
+
+  String getName() {
+    return _name;
+  }
+}
+</code></pre>
+
+<iframe src="https://dartpad.dev/7bc3487bd4fceb57464bf1f25d092a8e?run=true"></iframe>
+</div>
+
+<div class="section">
+<h2>6. Named Parameter Constructor</h2>
+<pre><code>
+class Produk {
+  final String id;
+  final String nama;
+  final double harga;
+  final int stok;
+  final String kategori;
+
+  Produk({
+    required this.id,
+    required this.nama,
+    required this.harga,
+    this.stok = 0,
+    this.kategori = 'Umum',
+  });
+}
+</code></pre>
+
+<iframe src="https://dartpad.dev/c59169f43ea6300d62fa22c8a79cee07?run=true"></iframe>
+</div>
+
+<div class="section">
+<h2>7. Tambahan Program</h2>
+
+<iframe src="https://dartpad.dev/b46d62a6f572c3e8b0da7fbe46d7c12d?run=true"></iframe>
+
+<br><br>
+
+<iframe src="https://dartpad.dev/9994d491f57e635dfcd631521283771f?run=true"></iframe>
+
+</div>
+
+<div class="footer">
+© 2026 - Laporan OOP Dart
+</div>
+
+</body>
+</html>
